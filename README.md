@@ -7,4 +7,4 @@ These patterns are described in [*Patterns of Enterprise Application Architectur
 
 ## List of Patterns
 
-1. [Gateway (An object that encapsulates acess to an external system or resource)](gateway/gateway.md)
+1. [Gateway (An object that encapsulates acess to an external system or resource)](gateway/README.md)
