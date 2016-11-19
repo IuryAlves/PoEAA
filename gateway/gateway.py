@@ -20,13 +20,10 @@ class DatabaseGateway(object):
     """
 
     db_api = sqlite3
-    sql_init_scripts = (
-        'create_tables.sql',
-    )
 
     def __init__(self, db_name):
         self.db_name = db_name
-        self.connection = self._init()
+        self.connection = DatabaseGateway.connect(self.db_name)
         self._cursor = None
 
     def execute(self, statement, *args):
@@ -45,10 +42,3 @@ class DatabaseGateway(object):
     @classmethod
     def connect(cls, db_name):
         return cls.db_api.connect(db_name)
-
-    def _init(self):
-        connection = DatabaseGateway.connect(self.db_name)
-        for sql_script in self.sql_init_scripts:
-            with open(path.join(_cur_dir, sql_script)) as sql:
-                connection.executescript(sql.read())
-        return connection

@@ -43,6 +43,7 @@ any downside to making the *Gateway*, and the code elsewhere in the system
 >>> from gateway import DatabaseGateway
 
 >>> gateway = DatabaseGateway('test.db')
+>>> gateway.execute('CREATE TABLE IF NOT EXISTS products (ID int PRIMARY KEY AUTOINCREMENT , name varchar, type varchar)')
 >>> gateway.execute('insert into products (name, type) values ("Open Word", "word_processor"))
 >>> gateway.execute('select * from products limit 1')
 >>> print(gateway.fetchone())
