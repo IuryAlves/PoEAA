@@ -7,10 +7,6 @@ from __future__ import (
 )
 
 import sqlite3
-from os import path
-
-
-_cur_dir = path.dirname(path.abspath(__file__))
 
 
 class DatabaseGateway(object):
