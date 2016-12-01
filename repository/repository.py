@@ -15,7 +15,7 @@ class ProductsRepository(object):
     @property
     def repository_strategy(self):
         return self._repository_strategy
-    
+
     @repository_strategy.setter
     def repository_strategy(self, strategy):
         self._repository_strategy = strategy

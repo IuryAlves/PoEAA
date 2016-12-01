@@ -10,6 +10,7 @@ import sys
 
 from factories import product_factory
 
+
 def setup():
     database_files = glob.glob('*.db')
     for database_file in database_files:
