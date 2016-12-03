@@ -17,4 +17,4 @@ These patterns are described by Martin Fowler in [*Patterns of Enterprise Applic
 
 ## Contributing
 
-If you want to contribute, pleas see the [contributing guide](CONTRIBUTING.md)
+If you want to contribute, please see the [contributing guide](CONTRIBUTING.md)
