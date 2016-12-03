@@ -13,3 +13,8 @@ These patterns are described by Martin Fowler in [*Patterns of Enterprise Applic
 1. [Gateway (An object that encapsulates acess to an external system or resource)](gateway/README.md)
 2. [Repository (Mediates between the domain and data mapping layers using a collection-like interface for accessing domain objects)](repository/README.md)
 
+
+
+## Contributing
+
+If you want to contribute, pleas see the [contributing guide](CONTRIBUTING.md)
