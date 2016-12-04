@@ -23,8 +23,8 @@ class ProductsRepository(object):
     def add(self, value):
         return self.repository_strategy.add(value)
 
-    def remove(self, value):
-        return self.repository_strategy.remove(value)
+    def remove(self, name):
+        return self.repository_strategy.remove(name=name)
 
-    def find(self, value):
-        return self.repository_strategy.find(value)
+    def find_by_name(self, name):
+        return self.repository_strategy.find_by_name(name=name)

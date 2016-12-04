@@ -39,7 +39,7 @@ class DatabaseStrategy(RepositoryStrategy):
         values = (name, )
         self.gateway.execute('DELETE FROM products WHERE name =?', values)
 
-    def find(self, name):
+    def find_by_name(self, name):
         values = (name, )
         result = []
         self.gateway.execute('SELECT * FROM products WHERE name like ?', values)
@@ -59,12 +59,14 @@ class InMemoryStrategy(RepositoryStrategy):
         self.domain_objects.append(domain_object)
         return domain_object
 
-    def remove(self, domain_object):
-        self.domain_objects.remove(domain_object)
-        return domain_object
+    def remove(self, name):
+        removed_objects = []
+        for domain_object in self.find_by_name(name):
+            self.domain_objects.remove(domain_object)
+            removed_objects.append(domain_object)
+        return removed_objects
 
-    def find(self, domain_object):
-        for item in self.domain_objects:
-            if item == domain_object:
-                return item
-        return None
+    def find_by_name(self, name):
+        return list(filter(
+            lambda domain_object: domain_object.name == name, self.domain_objects
+        ))
