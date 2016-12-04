@@ -11,8 +11,8 @@ If you make some change to the code, please run the tests before making a pull r
 
 
 ```
-pip install tox
-tox
+pip install -r requirements.txt
+./tests.sh
 ```
 
 and done!

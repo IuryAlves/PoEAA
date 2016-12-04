@@ -23,7 +23,6 @@ if __name__ == '__main__':
 
     # find all files that are in a folder and ends with .md
     files = glob.glob('**/*.md')
-    print(files)
     # create the test suite
     tests = doctest.DocFileSuite(*files, globs={'Product': product_factory()})
 
