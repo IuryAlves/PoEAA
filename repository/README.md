@@ -37,9 +37,9 @@ Using repository with a in memory strategy:
 ```python
 
 >>> from repository import ProductsRepository, InMemoryStrategy
->>> from factories import product_factory
+>>> from helpers import product_class_factory
 >>> products_repository = ProductsRepository(InMemoryStrategy())
->>> Product = product_factory()
+>>> Product = product_class_factory()
 >>> products_repository.add(Product(name='Smart TV', type='Eletronics'))
 Product(name='Smart TV', type='Eletronics')
 >>> products_repository.find_by_name(name='Smart TV')
@@ -52,8 +52,9 @@ Product(name='Smart TV', type='Eletronics')
 Using the same repository with a database strategy:
 ```python
 >>> from repository import ProductsRepository, DatabaseStrategy
+>>> from helpers import product_class_factory
 >>> products_repository = ProductsRepository(DatabaseStrategy())
->>> Product = product_factory()
+>>> Product = product_class_factory()
 >>> products_repository.add(Product(name='Smart TV', type='Eletronics'))
 >>> products_repository.find_by_name(name='Smart TV')
 [Product(name='Smart TV', type='Eletronics')]

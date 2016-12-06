@@ -10,5 +10,5 @@ from __future__ import (
 from collections import namedtuple
 
 
-def product_factory():
+def product_class_factory():
     return namedtuple('Product', ('name', 'type'))

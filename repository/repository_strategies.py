@@ -6,9 +6,8 @@ from __future__ import (
     absolute_import
 )
 
-
 from gateway import DatabaseGateway
-from factories import product_factory
+from helpers import product_class_factory
 
 
 class RepositoryStrategy(object):
@@ -45,7 +44,7 @@ class DatabaseStrategy(RepositoryStrategy):
         self.gateway.execute('SELECT * FROM products WHERE name like ?', values)
         for row in self.gateway.cursor.fetchall():
             _, name, type_ = row
-            Product = product_factory()
+            Product = product_class_factory()
             result.append(Product(name=name, type=type_))
         return result
 

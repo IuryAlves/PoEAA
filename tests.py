@@ -2,13 +2,14 @@
 # coding: utf-8
 
 
-import os
-import glob
 import doctest
-import unittest
+import glob
 import sys
+import unittest
 
-from factories import product_factory
+import os
+
+from helpers import product_class_factory
 
 
 def setup():
@@ -24,7 +25,7 @@ if __name__ == '__main__':
     # find all files that are in a folder and ends with .md
     files = glob.glob('**/*.md')
     # create the test suite
-    tests = doctest.DocFileSuite(*files, globs={'Product': product_factory()})
+    tests = doctest.DocFileSuite(*files, globs={'Product': product_class_factory()})
 
     # run the tests
     result = unittest.TextTestRunner().run(tests)
