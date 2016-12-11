@@ -1,8 +1,7 @@
 Patterns of Enterprise Application Software
 ===========================================
 
-[![Build Status](https://travis-ci.org/IuryAlves/EnterprisePatterns.svg?branch=master)](https://travis-ci.org/IuryAlves/EnterprisePatterns)
-![https://img.shields.io/dub/l/vibe-d.svg](https://img.shields.io/dub/l/vibe-d.svg)
+[![Build Status](https://travis-ci.org/IuryAlves/PoEAA.svg?branch=master)](https://travis-ci.org/IuryAlves/PoEAA)
 
 Patterns of Enterprise Application Software implemented in python
 
