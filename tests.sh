@@ -2,4 +2,4 @@
 
 
 flake8 .
-./tests.py
+./test_runner.py
